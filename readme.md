@@ -16,7 +16,7 @@ The detectors follow exactly the same pattern as the existing Android ScaleGestu
 
 This example using all three detectors: MoveGestureDetector, ScaleGestureDetector and RotationGestureDetector. Initialize the detectors in the initialization code:
 
-'''
+```
 ...
 
 			// initialize the gesture detection.
@@ -29,14 +29,14 @@ This example using all three detectors: MoveGestureDetector, ScaleGestureDetecto
 				this.Context, this);
 ...
 
-'''
+```
 
 The above code requires you to implement four interfaces: IOnTouchListener, ScaleGestureDetector.IOnScaleGestureListener, RotateGestureDetector.IOnRotateGestureListener and MoveGestureDetector.IOnMoveGestureListener
 
 Implement the ScaleGestureDetector.IOnScaleGestureListener:
 
 
-'''
+```
 		private double _deltaScale;
 
 		public bool OnScale (ScaleGestureDetector detector)
@@ -55,12 +55,12 @@ Implement the ScaleGestureDetector.IOnScaleGestureListener:
 
 		}
 
-'''
+```
 
 Implement the RotateGestureDetector.IOnRotateGestureListener:
 
 
-'''
+```
 		private double _deltaDegrees;
 
 		public bool OnRotate (RotateGestureDetector detector)
@@ -78,12 +78,13 @@ Implement the RotateGestureDetector.IOnRotateGestureListener:
 		{
 
 		}
-'''
+```
 
 Implement the MoveGestureDetector.IOnMoveGestureListener:
 
 
-'''		private double _deltaX;
+```		
+		private double _deltaX;
 		private double _deltaY;
 
 		public bool OnMove (MoveGestureDetector detector)
@@ -108,12 +109,12 @@ Implement the MoveGestureDetector.IOnMoveGestureListener:
 
 		}
 
-'''
+```
 
 And finally implement IOnTouchListener
 
 
-'''
+```
 		public bool OnTouch (global::Android.Views.View v, MotionEvent e)
 		{
 			_scaleGestureDetector.OnTouchEvent(e);
@@ -124,8 +125,7 @@ And finally implement IOnTouchListener
 
 			return true;
 		}
-
-'''
+```
 
 Code
 ----
